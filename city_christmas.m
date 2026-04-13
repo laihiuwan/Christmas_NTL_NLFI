@@ -1,6 +1,6 @@
 clc;clear;close all;
 
-file_path = '/Users/hannahlai821/Desktop/geoprog_submit/all_cities_daily_mean.csv';
+file_path = "C:\Users\hannahlhw\OneDrive - The Chinese University of Hong Kong\Desktop\Christmas_NTL_NLFI\all_cities_daily_mean.csv";
 T = readtable(file_path);
 
 date_text = string(T.Date);
@@ -92,3 +92,21 @@ for i=1:num_cities
     grid on
 
 end
+
+figure,
+hBar = bar(1:num_cities,Holiday_Effect_Pct);
+hBar.FaceColor = 'flat';
+for k=1:num_cities
+    if k<=5
+        hBar.CData(k,:) = [0.718,0.000,0.094];
+    else
+        hBar.CData(k,:) = [0.000,0.361,0.004];
+    end
+end
+set(gca,'XTick',1:num_cities)
+set(gca,'XTickLabel',cellstr(City))
+xtickangle(45)
+xlabel('City')
+ylabel('Holiday Effect (%)')
+title('Christmas Holiday Effect by City')
+grid on
