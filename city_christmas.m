@@ -81,14 +81,14 @@ for i=1:num_cities
     h1 = plot(x,y_raw,'.-','Color',[0.800,0.600,0.004],'LineWidth',1);
     hold on
     h2 = plot(x,y_smooth,'Color',[0.000,0.361,0.004],'LineWidth',2);
-    xline(baseline_start,'Color',[0.000,0.129,0.278],'LineStyle','--','LineWidth',1);
+    xline1 = xline(baseline_start,'Color',[0.000,0.129,0.278],'LineStyle','--','LineWidth',1);
     xline(baseline_end,'Color',[0.000,0.129,0.278],'LineStyle','--','LineWidth',1);
-    xline(christmas_start,'Color',[0.718,0.000,0.094],'LineStyle','-.','LineWidth',2);
+    xline2 = xline(christmas_start,'Color',[0.718,0.000,0.094],'LineStyle','-.','LineWidth',2);
     xline(christmas_end,'Color',[0.718,0.000,0.094],'LineStyle','-.','LineWidth',2);
     xlabel('Date')
     ylabel('Mean NTL')
     title(['Daily Nighttime Light in December 2019: ',char(City(i))])
-    legend([h1 h2], {'Raw NTL','Smoothed NTL'}, 'Location','best')
+    legend([h1,h2,xline1,xline2],{'Raw NTL','Smoothed NTL','Baseline','Christmas'}, 'Location','best')
     grid on
 
 end
