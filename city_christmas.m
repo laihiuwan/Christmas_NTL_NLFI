@@ -31,7 +31,6 @@ Baseline_Mean = nan(num_cities,1);
 Christmas_Mean = nan(num_cities,1);
 difference_value = nan(num_cities,1);
 Holiday_Effect_Pct = nan(num_cities,1);
-Instability = nan(num_cities,1);
 
 for i=1:num_cities
 
@@ -74,8 +73,6 @@ for i=1:num_cities
     else
         Holiday_Effect_Pct(i) = nan;
     end
-
-    Instability(i) = std(dec_data,'omitnan');
 
     figure
     h1 = plot(x,y_raw,'.-','Color',[0.800,0.600,0.004],'LineWidth',1);
