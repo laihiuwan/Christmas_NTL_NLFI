@@ -138,7 +138,7 @@ Computes **city-mean NLFI** and **city-mean Christmas effect (%)** for each city
 - **Formula**: `Holiday_Effect = ((Xmas_mean - Baseline_mean) / Baseline_mean) × 100`
 - **Periods**: Baseline = Dec 1-15, Christmas = Dec 21-26
 
-### Pixel-Level NLFI (from Tan et al., 2026)
+### Pixel-Level NLFI (from Tan et al., 2025)
 Link to paper: https://doi.org/10.1016/j.scs.2025.107043
 1. **Reshape**: `stack(row,col,31)` → `X(pixels,31)` for vectorised stats
 2. **Per-pixel stats**: mean, std, CV, slope (polyfit), kurtosis
