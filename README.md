@@ -34,7 +34,7 @@ GEE (Python) → ArcPy (Python) → MATLAB
 ## File Structure
 
 ```
-geoprog_submit/
+Christmas_NTL_NLFI/
 ├── download_NTL.py              # Step 1: GEE download
 ├── preprocess_NTL.py            # Step 2: ArcPy preprocessing
 ├── fQA.m                        # Helper: quality assurance (used by Step 3)
@@ -45,12 +45,14 @@ geoprog_submit/
 ├── cities.csv                   # Input: coordinates (for preprocess; place with ArcPy workspace)
 ├── all_cities_daily_mean.csv    # Output: city time series (from preprocess)
 │
-└── masked_tifs/                 # Output: masked GeoTIFFs (per city; under ArcPy root_path)
-    ├── Shanghai/
-    │   ├── Shanghai_20191201_NTL_masked.tif
-    │   └── ... (31 files)
-    └── Houston/
-        └── ...
+├── masked_tifs/                 # Output: masked GeoTIFFs (per city; under ArcPy root_path)
+│   ├── Shanghai/
+│   │   ├── Shanghai_20191201_NTL_masked.tif
+│   │   └── ... (31 files)
+│   └── Houston/
+│       └── ...
+│
+└── README.md
 ```
 
 ---
